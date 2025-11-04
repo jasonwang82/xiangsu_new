@@ -14,7 +14,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // 导航栏滚动效果
-let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
@@ -25,8 +24,6 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.style.background = 'rgba(44, 62, 80, 1)';
     }
-    
-    lastScroll = currentScroll;
 });
 
 // 特性卡片动画
@@ -104,5 +101,4 @@ document.head.appendChild(style);
 // 页面加载完成后执行
 window.addEventListener('DOMContentLoaded', () => {
     createPixelEffect();
-    console.log('像素网站已加载完成');
 });
